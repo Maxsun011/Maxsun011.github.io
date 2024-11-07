@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #dddddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            text-align: center;
+            background-color: #e9ecef;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            width: 70%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #fdfdfd;
+        }
+
+        h1 {
+            color: #35424a;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #35424a;
+            margin-top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .socials {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            color: #35424a;
+            font-size: 24px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+            }
+        }
+
+        // Show the about section by default
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleSection('about');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="bird.jpg" alt="Your Name" class="profile-image"> <!-- Replace with your image path -->
+            <h1>Your Name</h1>
+            <p>Web Developer | Designer | Tech Enthusiast</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a onclick="toggleSection('about')">About Me</a></li>
+                    <li><a onclick="toggleSection('skills')">Skills</a></li>
+                    <li><a onclick="toggleSection('projects')">Projects</a></li>
+                    <li><a onclick="toggleSection('contact')">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello! I'm a passionate web developer who loves creating beautiful and functional websites. I enjoy coding and am constantly learning new technologies.</p>
+            </section>
+            
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </section>
+            
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Project 1:</strong> Description of project 1.</li>
+                    <li><strong>Project 2:</strong> Description of project 2.</li>
+                    <li><strong>Project 3:</strong> Description of project 3.</li>
+                </ul>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
