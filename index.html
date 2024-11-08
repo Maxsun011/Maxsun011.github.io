@@ -3,186 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+    <title>Aspiring Front-End Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #dddddd;
+            background-color: #dcdcdc;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-
         .container {
             background: #ffffff;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 800px;
+            width: 75%;
+            max-width: 900px;
             height: 80vh;
             display: flex;
         }
-
         .sidebar {
             width: 30%;
-            padding: 20px;
+            padding: 27px;
             border-right: 1px solid #ddd;
             text-align: center;
             background-color: #e9ecef;
+            border-radius: 20px 0 0 20px;
         }
-
         .profile-image {
-            width: 100px;
-            height: 100px;
+            width: 190px;
+            height: 190px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #ffffff;
-            margin-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
-
         .content {
             width: 70%;
             padding: 20px;
             overflow-y: auto;
             background-color: #fdfdfd;
+            border-radius: 0 20px 20px 0;
         }
-
         h1 {
             color: #35424a;
             margin: 10px 0;
         }
-
         h2 {
             color: #35424a;
             margin-top: 0;
         }
-
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
         nav ul {
             list-style: none;
             padding: 0;
             text-align: left;
         }
-
         nav ul li {
             margin: 10px 0;
         }
-
         nav ul li a {
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
             cursor: pointer;
         }
-
         nav ul li a:hover {
             text-decoration: underline;
         }
-
-        section {
-            display: none;
-            margin: 20px 0;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         .socials {
-            margin: 20px 0;
+            margin: 1px 0;
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-
         .socials a {
             text-decoration: none;
             color: #35424a;
             font-size: 24px;
         }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #35424a;
-            color: #ffffff;
-            border-radius: 0 0 10px 10px;
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+        .contact-icons a {
+            text-decoration: none;
+            color: #35424a;
+            font-size: 24px;
         }
     </style>
-    <script>
-        function toggleSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            const activeSection = document.getElementById(sectionId);
-            if (activeSection) {
-                activeSection.style.display = 'block';
-            }
-        }
-
-        // Show the about section by default
-        document.addEventListener('DOMContentLoaded', () => {
-            toggleSection('about');
-        });
-    </script>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <img src="bird.jpg" alt="Your Name" class="profile-image"> <!-- Replace with your image path -->
-            <h1>Your Name</h1>
-            <p>Web Developer | Designer | Tech Enthusiast</p>
+            <img src="https://protechwebdesigner.com/wp-content/uploads/2024/08/developer-programmer-coding-8764523.jpg" alt="My Profile" class="profile-image">
+            <h1>Mostafa</h1>
+            <p>Aspiring Front-End Developer Data Science Learner</p>
             <div class="socials">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/account" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/account" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/mspytho" target="_blank" title="X/Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://website.com" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+                <a href="mailto:mostafasobh955@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <nav>
-                <ul>
-                    <li><a onclick="toggleSection('about')">About Me</a></li>
-                    <li><a onclick="toggleSection('skills')">Skills</a></li>
-                    <li><a onclick="toggleSection('projects')">Projects</a></li>
-                    <li><a onclick="toggleSection('contact')">Contact Me</a></li>
-                </ul>
-            </nav>
         </div>
-        
         <div class="content">
             <section id="about">
-                <h2>About Me</h2>
-                <p>Hello! I'm a passionate web developer who loves creating beautiful and functional websites. I enjoy coding and am constantly learning new technologies.</p>
+                <h2><i class="fas fa-info-circle"></i> About me</h2>
+                <p>Hello! My name is Mostafa Subhani, And i'm from Herat, Afghanistan.<br>I am a beginner front-end developer who is continuously working on improving my skills. In addition, I am interested in the field of Data Science and am currently learning related topics.
+                    My goal is to strengthen my skills so that in the future, I can work on projects related to them.</p>
             </section>
-            
+
             <section id="skills">
-                <h2>Skills</h2>
+                <h2><i class="fas fa-code"></i> Skills</h2>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
                 </ul>
             </section>
-            
-            <section id="projects">
-                <h2>Projects</h2>
+
+            <section id="Project">
+                <h2><i class="fas fa-project-diagram"></i> Project</h2>
                 <ul>
-                    <li><strong>Project 1:</strong> Description of project 1.</li>
-                    <li><strong>Project 2:</strong> Description of project 2.</li>
-                    <li><strong>Project 3:</strong> Description of project 3.</li>
+                    <li><strong>Personal Portfolio</strong></li>
+                    <p>This was my first project using HTML and CSS as a practice exercise. In this website, I created a personal profile that includes sections for skills, projects, and contact information.</p>
+                    <hr>
+                </ul>
+
+            </section>
+
+            <section id="certifications">
+                <h2><i class="fas fa-award"></i> Certifications</h2>
+                <ul>
+                    <li>Responsive Web Design Certification - FreeCodeCamp</li>
+                    <li>Python Programming Certification - Cisco</li>
+                    <li>Python Programming Certification - FreeCodeCamp</li>
                 </ul>
             </section>
-            
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></p>
+
+            <section id="language">
+                <h2><i class="fas fa-language"></i> Languages</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Persian</li>
+                    <li>Turkish</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-address-book"></i> Contact</h2>
+                <p>Phone: +93 72 938 7534</p>
+                <p>E-mail: <a href="mailto:mostafasobh955@gmail.com">mostafasobh955@gmail.com</a></p>
             </section>
         </div>
     </div>
